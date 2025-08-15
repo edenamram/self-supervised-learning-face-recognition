@@ -76,3 +76,12 @@ https://colab.research.google.com/github/edenamram/self-supervised-learning-face
 - **Slow training on CPU** → reduce image size, batch size, and epochs for a quick sanity run.
 - **Paths wrong** → verify the first notebook cell: `TRAIN_DIR`, `TEST_DIR`, `OUTPUT_DIR`, `CHECKPOINT_DIR`.
 
+---
+
+## Competitor Model: PULSE
+
+For comparison, we also ran inference using the **PULSE** model ([github.com/alex-damian/pulse](https://github.com/alex-damian/pulse)),  
+which generates high-resolution images from low-resolution inputs by searching the latent space of a pre-trained generative model (StyleGAN) to match the LR input when downsampled.
+
+We used the official inference script from that repository to super-resolve the same test images as in our SSL + MNTSR pipeline, allowing direct qualitative and quantitative comparisons (e.g., PSNR, SSIM, LPIPS).
+
